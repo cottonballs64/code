@@ -6,11 +6,12 @@ If the user enters a number between 3 and 8, the program should respond by print
 In all cases, the program should finish by printing the message, "Pleasant dreams!" 
 */
 #include <iostream>
+
 using namespace std;
 
 int main() {
 
-int bedRate = 0;
+int bedRate;
 
 cout << "Would Goldilocks sleep in your bed? How would you rate its softness?\n" << "Please enter a number between 1 and 10. 1 being the hardest bed possible and 10 being the softest.\n";
 
@@ -25,6 +26,8 @@ cout << "That is too hard!" << endl;
     else if (bedRate > 3 & bedRate < 8) {
         cout << "That is just right!" << endl;
     }
-    else if (bedRate == 0)
+    else
         cout << "Looks like you entered something wrong. Please try running the program again.\n";
+
+cout << "Pleasant Dreams\n";
 }
