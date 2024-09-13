@@ -26,6 +26,6 @@ cout << "That is too hard!" << endl;
     else if (bedRate > 3 & bedRate < 8) {
         cout << "That is just right!" << endl;
     }
-    else if (bedRate == 0)
+    else
         cout << "Looks like you entered something wrong. Please try running the program again.\n";
 }
