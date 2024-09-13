@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
 
-int bedRate = 0;
+int bedRate;
 
 cout << "Would Goldilocks sleep in your bed? How would you rate its softness?\n" << "Please enter a number between 1 and 10. 1 being the hardest bed possible and 10 being the softest.\n";
 
@@ -28,4 +28,6 @@ cout << "That is too hard!" << endl;
     }
     else
         cout << "Looks like you entered something wrong. Please try running the program again.\n";
+
+cout << "Pleasant Dreams\n";
 }
