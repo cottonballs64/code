@@ -1,63 +1,37 @@
 /*
-Create a program that performs different arithmatic operations on two integers of the user's choice after the user selects which operation to perform via a menu.
-Prompt the user for two integers, a and b.
-Collect those integers from the user.
-Prompt the user to enter the sort of operation they want to perform: +, -, *, /, or %.
-Then, depending on the user's input, perform the operation and display the result to the screen.
+Write a C++ program that asks the user whether or not they had a good weekend. The program should prompt the user to enter "Y or N".
+Then, the program should collect the char entry from the user, and print out one of three messages.
+If the user enters 'y' or 'Y', then the program should respond with "That's great to hear!"
+If the user enters 'n' or 'N', then the program should respond with "I am sorry to hear that."
+If the user enters any other character, the program should respond with, "Sounds like someone has a case of the Mondays!"
 */
 #include <iostream>
 using namespace std;
 
 int main() {
 
-int numberX, numberY, answer;
-char arithmaticSelection;
-string equals = " = ";
+char userResponse;
 
-// Explain function of program to user
-cout <<"This program will take two integers and perform an arithmatic operation on them using C++. (For example X + Y)\n";
-// Prompt for integer input
-cout << "What number would you like X to be?\n";
-cin >> numberX;
-cout << "What number would you like Y to be?\n";
-cin >> numberY;
-// Prompt for arithmatic selection
-cout << "Please enter a selection for which type of operation you want to perform with your two numbers.\n";
-cout << "A) X + Y\n";
-cout << "B) X - Y\n";
-cout << "C) X * Y\n";
-cout << "D) X / Y\n";
-cout << "E) X % Y\n";
-cout << "F) Cancel program\n";
-cin >> arithmaticSelection;
-//Performs requested function
-if (arithmaticSelection == 'A' || arithmaticSelection == 'a')
+// Write a C++ program that asks the user whether or not they had a good weekend. The program should prompt the user to enter "Y or N".
+cout << "Did you have a nice weekend? Please response with (Y/N)\n";
+cin >> userResponse;
+
+// If the user enters 'y' or 'Y', then the program should respond with "That's great to hear!"
+if (userResponse == 'Y' || userResponse == 'y')
 {
-    answer = numberX + numberY;
-    cout << numberX << " + " << numberY << equals << answer;
+    cout << "That's great to hear!\n";
+    return 0;
 } 
-else if (arithmaticSelection == 'B' || arithmaticSelection == 'b')
+// If the user enters 'n' or 'N', then the program should respond with "I am sorry to hear that."
+else if (userResponse == 'N' || userResponse == 'n')
 {
-    answer = numberX - numberY;
-    cout << numberX << " - " << numberY << equals << answer;
+    cout << "I am sorry to hear that.\n";
+    return 0;
 }
-else if (arithmaticSelection == 'C' || arithmaticSelection == 'c')
-{
-    answer = numberX * numberY;
-    cout << numberX << " * " << numberY << equals << answer;
-}
-else if (arithmaticSelection == 'D' || arithmaticSelection == 'd')
-{
-    answer = numberX / numberY;
-    cout << numberX << " / " << numberY << equals << answer;
-}
-else if (arithmaticSelection == 'E' || arithmaticSelection == 'e')
-{
-    answer = numberX % numberY;
-    cout << numberX << " % " << numberY << equals << answer;
-}
+// If the user enters any other character, the program should respond with, "Sounds like someone has a case of the Mondays!"
 else
 {
+    cout << "Sounds like someone has a case of the Mondays!\n";
     return 0;
-};
+}
 }

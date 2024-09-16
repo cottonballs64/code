@@ -1,63 +1,52 @@
 /*
-Create a program that performs different arithmatic operations on two integers of the user's choice after the user selects which operation to perform via a menu.
-Prompt the user for two integers, a and b.
-Collect those integers from the user.
-Prompt the user to enter the sort of operation they want to perform: +, -, *, /, or %.
-Then, depending on the user's input, perform the operation and display the result to the screen.
+Write a C++ program that prompts the user for a percentage, and then prints out the letter grade appropriate to that percentage on the following scale:
+90-100 == A
+80-89 == B
+70-79 == C
+60-69 == D
+59 or lower == F
+How would we solve this using if-else if, statements?  How would we use a switch statement?  Try to use a switch statement.
 */
 #include <iostream>
 using namespace std;
 
 int main() {
 
-int numberX, numberY, answer;
-char arithmaticSelection;
-string equals = " = ";
+double userGrade;
+int letterGrade;
 
-// Explain function of program to user
-cout <<"This program will take two integers and perform an arithmatic operation on them using C++. (For example X + Y)\n";
-// Prompt for integer input
-cout << "What number would you like X to be?\n";
-cin >> numberX;
-cout << "What number would you like Y to be?\n";
-cin >> numberY;
-// Prompt for arithmatic selection
-cout << "Please enter a selection for which type of operation you want to perform with your two numbers.\n";
-cout << "A) X + Y\n";
-cout << "B) X - Y\n";
-cout << "C) X * Y\n";
-cout << "D) X / Y\n";
-cout << "E) X % Y\n";
-cout << "F) Cancel program\n";
-cin >> arithmaticSelection;
-//Performs requested function
-if (arithmaticSelection == 'A' || arithmaticSelection == 'a')
+cout << "Please enter the percentage grade you received.\n";
+cin >> userGrade;
+// Convert to int and simplify range
+letterGrade = (int)(userGrade / 10);
+// Handle cases of grades higher than 100
+if (letterGrade > 10)
 {
-    answer = numberX + numberY;
-    cout << numberX << " + " << numberY << equals << answer;
-} 
-else if (arithmaticSelection == 'B' || arithmaticSelection == 'b')
-{
-    answer = numberX - numberY;
-    cout << numberX << " - " << numberY << equals << answer;
-}
-else if (arithmaticSelection == 'C' || arithmaticSelection == 'c')
-{
-    answer = numberX * numberY;
-    cout << numberX << " * " << numberY << equals << answer;
-}
-else if (arithmaticSelection == 'D' || arithmaticSelection == 'd')
-{
-    answer = numberX / numberY;
-    cout << numberX << " / " << numberY << equals << answer;
-}
-else if (arithmaticSelection == 'E' || arithmaticSelection == 'e')
-{
-    answer = numberX % numberY;
-    cout << numberX << " % " << numberY << equals << answer;
-}
-else
-{
-    return 0;
+    letterGrade = 10;
 };
+// Provide user feedback using switch statement
+switch (letterGrade)
+{
+case 10:
+case 9: cout << "You got an A on the test\n";
+    break;
+case 8: cout << "You got a B on the test\n";
+    break;
+case 7: cout << "You got a C on the test\n";
+    break;
+case 6: cout << "You got a D on the test\n";
+    break;
+case 5:
+case 4:
+case 3:
+case 2:
+case 1:
+case 0: cout << "You got a F on the test\n";
+    break;
+default : cout << "Looks like you entered something else";
+break;
+}
+
+return 0;
+
 }
