@@ -1,4 +1,5 @@
 # Learning
 Messing with Node.js to learn BE basics
 
-## New Merge
+## An additional statement
+Also learning C++ and developing my skills
