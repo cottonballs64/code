@@ -61,6 +61,8 @@
     "iostream": "cpp",
     "iomanip": "cpp",
     "ios": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "ratio": "cpp",
+    "istream": "cpp"
   }
 }
