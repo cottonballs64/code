@@ -54,10 +54,13 @@ int main()
             {
             cout << endl << "Please input a grade" << endl;
             // Fill in the input statement to place grade in the array
+            cin >> grades[count];
             }
         cout << firstname << " " << lastname << " has an average of ";
         // Fill in code to get and print average of student to screen
+        cout << (average = findGradeAvg(grades, numOfGrades));
         // Fill in call to get and print letter grade of student to screen
+        cout << " which gives the letter grade of " << findLetterGrade(average) << endl;
         cout << endl << endl << endl;
         cout << "Please input a y if you want to input more students"
         << " any other character will stop the input" << endl;
@@ -78,6 +81,13 @@ int main()
 float findGradeAvg(GradeType array, int numGrades)
     {
     // Fill in the code for this function
+    float sum = 0;
+    for (int count = 0; count < numGrades; count++)
+    {
+        sum += array[count];
+    }
+    float average = sum / numGrades;
+    return average;
     }
 //***********************************************************************
 // findLetterGrade
@@ -93,17 +103,47 @@ float findGradeAvg(GradeType array, int numGrades)
 char findLetterGrade(float numGrade)
     {
     // Fill in the code for this function
+    char letterGrade;
+    if (numGrade >= 90)
+    {
+        letterGrade = 'A';
+    }
+    else if (numGrade >= 80)
+    {
+        letterGrade = 'B';
+    }
+    else if (numGrade >= 70)
+    {
+        letterGrade = 'C';
+    }
+    else if (numGrade >= 60)
+    {
+        letterGrade = 'D';
+    }
+    else
+    letterGrade = 'F';
+    return letterGrade;
     }
 
 /*
 Exercise 1: Complete the program by filling in the code. (Areas in bold)
+
 Run the program with 3 grades per student using the sample data below.
+
 Mary Brown 100 90 90
 George Smith 90 30 50
 Dale Barnes 80 78 82
 Sally Dolittle 70 65 80
 Conrad Bailer 60 58 71
+
 You should get the following results:
+Mary Brown has an average of 93.33 which gives the letter grade of A
+George Smith has an average of 56.67 which gives the letter grade of F
+Dale Barnes has an average of 80.00 which gives the letter grade of B
+Sally Dolittle has an average of 71.67 which gives the letter grade of C
+Conrad Bailer has an average of 63.00 which gives the letter grade of D
+
+My actual results matched:
 Mary Brown has an average of 93.33 which gives the letter grade of A
 George Smith has an average of 56.67 which gives the letter grade of F
 Dale Barnes has an average of 80.00 which gives the letter grade of B
