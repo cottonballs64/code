@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/micahstradling/code/school/week11",
-      "program": "/Users/micahstradling/code/school/week11/build/Debug/outDebug"
+      "cwd": "/Users/micahstradling/code/school/week12",
+      "program": "/Users/micahstradling/code/school/week12/build/Debug/outDebug"
     }
   ]
 }
