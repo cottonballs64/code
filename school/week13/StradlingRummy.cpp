@@ -1,11 +1,51 @@
 /*
-Create a struct Card which represents a playing card with a suit and value. 
-In the main program, create a vector of Cards called Deck.
-Create a function to initialize your deck and another to draw a card.
-Create a function that prints out the card name, and then demonstrate the draw() function in main.
-vector<Card> initializeDeck();
-Card draw( vector<Card> &deck );
-void printCard( Card card);
+<Rummy Rules>
+
+Win Condition
+{
+    Get 500 points first
+}
+
+Point Values
+{
+    Rank(0) = 20 pts;
+    Rank(1-7) = 5 pts;
+    Rank(10-12) = 10 pts;
+    Rank(13) = 15 pts;
+    Rank(11)Suit(3) = 40 pts;
+    Bonus = 50 pts to total;
+        If 1st time laying any cards and you discard your final card to end turn
+}
+
+Run options
+{
+    3 in a row
+    3 of a kind
+}
+
+Actions On Turn
+{
+    {
+        Draw from Deck
+            Lay down card for points
+                Play min of 3 from hand
+                Play from hand off already played cards
+            Discard
+    }
+    {
+        Draw from Discard
+            Draw card on top
+                Keep in hand
+                Play card with two others
+            Draw deeper card
+                Play card with two others
+                Play card off already played cards
+    }
+}
+
+
+
+
 */
 
 #include <iostream>
