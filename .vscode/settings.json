@@ -99,6 +99,18 @@
     "typeinfo": "cpp",
     "variant": "cpp",
     "algorithm": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "unordered_map": "cpp",
+    "array": "cpp",
+    "__node_handle": "cpp",
+    "deque": "cpp",
+    "__memory": "cpp",
+    "optional": "cpp",
+    "__hash_table": "cpp",
+    "__split_buffer": "cpp",
+    "__tree": "cpp",
+    "list": "cpp"
   }
 }
