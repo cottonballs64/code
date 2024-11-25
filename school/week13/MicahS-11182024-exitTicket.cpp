@@ -27,7 +27,6 @@ int main() {
     srand(time(0));
     vector<Card> CurrentDeck = initializeDeck();
     Card YourCard = draw(CurrentDeck);
-    cout << YourCard.rankType[YourCard.rank] << endl << YourCard.suitType[YourCard.suit] << endl;
     printCard(YourCard);
     return 0;
 }
@@ -36,7 +35,9 @@ vector<Card> initializeDeck(){
     vector<Card> newDeck;
     for (int i = 0; i < 52; i++)
     {
-        Card card = {i % 13, i % 4};
+        Card card;
+        card.rank=(i%13);
+        card.suit=(i % 4);
         newDeck.push_back(card);
     }
     return newDeck;
