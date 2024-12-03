@@ -1,31 +1,6 @@
 // Yuka Nagayoshi
 // Create an employee database ranking system
 
-/*
-You are tasked with creating a C++ program that reads employee data from a file, processes the data, and displays information about the employees. Follow the steps below to complete the program:
-
-Requirements:
-
-The program should read employee data from a file named employees.txt.
-Create a struct named Employee to store:
-id (integer): Employee ID
-name (string): Employee Name
-department (string): Department Name
-salary (float): Employee Salary
-yearsOfExperience (integer): Years of Experience
-Write a function to read data from the file into an array of Employee structs.
-Write a function to calculate the bonus for each employee based on their salary and years of experience: Bonus = (yearsOfExperience * 0.05 * salary)
-Write a function to sort the employees by their bonus in descending order.
-Write a function to display the sorted employee list with their ID, Name, Department, Salary, Years of Experience, and Bonus.
-
-Output:
-ID   Name      Department     Salary    Years of Experience Bonus     
-----------------------------------------------------------------------
-103  Bob       Marketing      62000     7                   21700     
-101  John      HR             50000     5                   12500     
-102  Alice     IT             75000     3                   11250 
-*/
-
 #include <iostream>
 #include <fstream>
 #include <string>
